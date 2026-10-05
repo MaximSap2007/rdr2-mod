@@ -1,0 +1,18 @@
+{
+  "sheet": "entities",
+  "columns": ["id", "label", "handle_hook", "note"],
+  "rows": [
+    {
+      "id": "player",
+      "label": "Артур Морган",
+      "handle_hook": "player.get_ped",
+      "note": "Персонаж, яким керує гравець"
+    },
+    {
+      "id": "horse",
+      "label": "Кінь гравця",
+      "handle_hook": "player.get_mount",
+      "note": "Кінь, на якому їде гравець або який поруч із ним. Який саме кінь вважається «кіньми гравця», коли Артур спішений, ще треба з'ясувати в грі"
+    }
+  ]
+}

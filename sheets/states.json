@@ -1,0 +1,30 @@
+{
+  "sheet": "states",
+  "columns": ["id", "enter_when", "behavior", "exits", "needs_hooks", "uses_config"],
+  "rows": [
+    {
+      "id": "recording",
+      "enter_when": "Сюжетний режим, гра не на паузі, клавіша відпущена",
+      "behavior": "Записує знімок стану Артура й коня з частотою sample_rate_hz і зберігає останні buffer_seconds секунд",
+      "exits": ["rewinding", "disabled"],
+      "needs_hooks": ["game.frame_tick", "game.is_paused", "game.is_online"],
+      "uses_config": ["sample_rate_hz", "buffer_seconds"]
+    },
+    {
+      "id": "rewinding",
+      "enter_when": "Клавішу утримують і є записані знімки",
+      "behavior": "Рухає таймлайн назад зі швидкістю rewind_speed і щокадру застосовує інтерпольований знімок. Коли клавішу відпускають, обрізає «майбутнє» й продовжує запис з цього моменту",
+      "exits": ["recording", "disabled"],
+      "needs_hooks": ["game.frame_tick", "game.is_paused", "game.is_online"],
+      "uses_config": ["rewind_key_vk", "rewind_speed"]
+    },
+    {
+      "id": "disabled",
+      "enter_when": "Гра в онлайн-режимі або не всі потрібні хуки підтверджені",
+      "behavior": "Нічого не читає й не змінює в грі, буфер очищується",
+      "exits": ["recording"],
+      "needs_hooks": ["game.is_online"],
+      "uses_config": []
+    }
+  ]
+}

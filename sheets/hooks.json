@@ -1,0 +1,141 @@
+{
+  "sheet": "hooks",
+  "columns": ["id", "kind", "target", "signature", "game_version", "status", "note"],
+  "rows": [
+    {
+      "id": "entity.get_coords",
+      "kind": null,
+      "target": null,
+      "signature": "Vec3 (EntityHandle)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Читання позиції істоти"
+    },
+    {
+      "id": "entity.set_coords",
+      "kind": null,
+      "target": null,
+      "signature": "void (EntityHandle, Vec3)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Запис позиції без зайвих ефектів (без анімації падіння тощо)"
+    },
+    {
+      "id": "entity.get_heading",
+      "kind": null,
+      "target": null,
+      "signature": "float (EntityHandle)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Градуси; перевірити діапазон 0..360 чи -180..180"
+    },
+    {
+      "id": "entity.set_heading",
+      "kind": null,
+      "target": null,
+      "signature": "void (EntityHandle, float)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Той самий діапазон градусів, що й у get_heading"
+    },
+    {
+      "id": "entity.get_health",
+      "kind": null,
+      "target": null,
+      "signature": "int32 (EntityHandle)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Перевірити, чи це ціле число й чи кінь читається так само, як людина"
+    },
+    {
+      "id": "entity.set_health",
+      "kind": null,
+      "target": null,
+      "signature": "void (EntityHandle, int32)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Записувати без ефекту лікування (без анімацій і звуків), якщо це можливо"
+    },
+    {
+      "id": "entity.get_stamina",
+      "kind": null,
+      "target": null,
+      "signature": "float (EntityHandle)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Ядро витривалості персонажа й коня"
+    },
+    {
+      "id": "entity.set_stamina",
+      "kind": null,
+      "target": null,
+      "signature": "void (EntityHandle, float)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Перевірити, чи не потрібно окремо скидати таймер відновлення витривалості"
+    },
+    {
+      "id": "player.get_ammo_in_clip",
+      "kind": null,
+      "target": null,
+      "signature": "int32 ()",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Для поточної зброї Артура"
+    },
+    {
+      "id": "player.set_ammo_in_clip",
+      "kind": null,
+      "target": null,
+      "signature": "void (int32)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Записувати без анімації перезарядки"
+    },
+    {
+      "id": "player.get_ped",
+      "kind": null,
+      "target": null,
+      "signature": "EntityHandle ()",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Дескриптор Артура"
+    },
+    {
+      "id": "player.get_mount",
+      "kind": null,
+      "target": null,
+      "signature": "EntityHandle ()",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Дескриптор коня, 0 якщо коня немає"
+    },
+    {
+      "id": "game.is_online",
+      "kind": null,
+      "target": null,
+      "signature": "bool ()",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Обов'язково: у онлайні плагін не має нічого чіпати"
+    },
+    {
+      "id": "game.is_paused",
+      "kind": null,
+      "target": null,
+      "signature": "bool ()",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Меню, завантаження, катсцена: у цей час не записуємо й не перемотуємо"
+    },
+    {
+      "id": "game.frame_tick",
+      "kind": null,
+      "target": null,
+      "signature": "void (callback)",
+      "game_version": null,
+      "status": "unresolved",
+      "note": "Виклик on_frame() щокадру в потоці скриптів гри. Ігрові функції не можна викликати з чужого потоку, а без Script Hook цей виклик треба влаштувати самим"
+    }
+  ]
+}

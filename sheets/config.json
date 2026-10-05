@@ -1,0 +1,38 @@
+{
+  "sheet": "config",
+  "columns": ["key", "type", "default", "min", "max", "description"],
+  "rows": [
+    {
+      "key": "rewind_key_vk",
+      "type": "i32",
+      "default": 117,
+      "min": 1,
+      "max": 254,
+      "description": "Код віртуальної клавіші (VK), яку тримають для перемотки. 117 = F6. Перевірити в грі, що вона не зайнята"
+    },
+    {
+      "key": "buffer_seconds",
+      "type": "f32",
+      "default": 15.0,
+      "min": 1.0,
+      "max": 60.0,
+      "description": "Скільки секунд назад можна відмотати"
+    },
+    {
+      "key": "sample_rate_hz",
+      "type": "i32",
+      "default": 30,
+      "min": 5,
+      "max": 120,
+      "description": "Скільки знімків стану на секунду записувати"
+    },
+    {
+      "key": "rewind_speed",
+      "type": "f32",
+      "default": 1.0,
+      "min": 0.25,
+      "max": 4.0,
+      "description": "Швидкість перемотки: 1.0 = у реальному часі"
+    }
+  ]
+}

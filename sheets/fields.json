@@ -1,0 +1,96 @@
+{
+  "sheet": "fields",
+  "columns": ["id", "entity", "type", "restore_policy", "getter", "setter", "verified", "description"],
+  "rows": [
+    {
+      "id": "player.position",
+      "entity": "player",
+      "type": "vec3",
+      "restore_policy": "lerp",
+      "getter": "entity.get_coords",
+      "setter": "entity.set_coords",
+      "verified": false,
+      "description": "Позиція Артура у світі"
+    },
+    {
+      "id": "player.heading",
+      "entity": "player",
+      "type": "f32",
+      "restore_policy": "lerp_angle",
+      "getter": "entity.get_heading",
+      "setter": "entity.set_heading",
+      "verified": false,
+      "description": "Напрямок Артура, градуси"
+    },
+    {
+      "id": "player.health",
+      "entity": "player",
+      "type": "i32",
+      "restore_policy": "step",
+      "getter": "entity.get_health",
+      "setter": "entity.set_health",
+      "verified": false,
+      "description": "Здоров'я Артура"
+    },
+    {
+      "id": "player.stamina",
+      "entity": "player",
+      "type": "f32",
+      "restore_policy": "lerp",
+      "getter": "entity.get_stamina",
+      "setter": "entity.set_stamina",
+      "verified": false,
+      "description": "Витривалість Артура"
+    },
+    {
+      "id": "player.ammo_in_clip",
+      "entity": "player",
+      "type": "i32",
+      "restore_policy": "step",
+      "getter": "player.get_ammo_in_clip",
+      "setter": "player.set_ammo_in_clip",
+      "verified": false,
+      "description": "Патрони в магазині поточної зброї Артура"
+    },
+    {
+      "id": "horse.position",
+      "entity": "horse",
+      "type": "vec3",
+      "restore_policy": "lerp",
+      "getter": "entity.get_coords",
+      "setter": "entity.set_coords",
+      "verified": false,
+      "description": "Позиція коня у світі"
+    },
+    {
+      "id": "horse.heading",
+      "entity": "horse",
+      "type": "f32",
+      "restore_policy": "lerp_angle",
+      "getter": "entity.get_heading",
+      "setter": "entity.set_heading",
+      "verified": false,
+      "description": "Напрямок коня, градуси"
+    },
+    {
+      "id": "horse.health",
+      "entity": "horse",
+      "type": "i32",
+      "restore_policy": "step",
+      "getter": "entity.get_health",
+      "setter": "entity.set_health",
+      "verified": false,
+      "description": "Здоров'я коня"
+    },
+    {
+      "id": "horse.stamina",
+      "entity": "horse",
+      "type": "f32",
+      "restore_policy": "lerp",
+      "getter": "entity.get_stamina",
+      "setter": "entity.set_stamina",
+      "verified": false,
+      "description": "Витривалість коня"
+    }
+  ]
+}
